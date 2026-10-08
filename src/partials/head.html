@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  // Set language and direction before first paint to avoid a layout flash.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search).get('lang');
+      var s = localStorage.getItem('zaineldeen:lang');
+      var l = q === 'ar' || q === 'en' ? q : s === 'ar' || s === 'en' ? s : 'en';
+      document.documentElement.lang = l;
+      document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+    } catch (e) {}
+  })();
+</script>
+<meta name="theme-color" content="#5a1626">
+<meta name="author" content="Zain El Deen Store">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="icon" href="./favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="canonical" href="%SITE_URL%%PAGE%" data-site-url>
+<link rel="alternate" hreflang="en" href="%SITE_URL%%PAGE%" data-site-url>
+<link rel="alternate" hreflang="ar" href="%SITE_URL%%PAGE%?lang=ar" data-site-url>
+<link rel="alternate" hreflang="x-default" href="%SITE_URL%%PAGE%" data-site-url>
+<meta property="og:site_name" content="Zain El Deen Store">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar">
+<meta property="og:image" content="%SITE_URL%og-image.jpg" data-site-url>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Zain El Deen Store — fragrance, beauty and everyday elegance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="%SITE_URL%og-image.jpg" data-site-url>

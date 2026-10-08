@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="600" viewBox="0 0 480 600" role="img"><title>Illustration</title><path d="M96 540V250a144 144 0 0 1 288 0V540Z" fill="#fff" opacity=".5"/><path d="M96 540V250a144 144 0 0 1 288 0V540Z" fill="none" stroke="#b8935a" stroke-opacity=".55" stroke-width="2"/><ellipse cx="240" cy="490" rx="52" ry="10" fill="#231a1c" opacity=".1"/>
+    <rect x="236" y="196" width="8" height="70" rx="3" fill="#935d48"/><path d="M228 168Q240 150 252 168L248 200H232Z" fill="#b8745a"/>
+    <rect x="224" y="262" width="32" height="22" rx="4" fill="#b8935a"/>
+    <rect x="216" y="282" width="48" height="204" rx="10" fill="#f4ede6" stroke="#d7d1ca"/><rect x="224" y="298" width="12" height="130" rx="6" fill="#fff" opacity=".42"/><rect x="216" y="392" width="48" height="40" fill="#b8745a"/></svg>

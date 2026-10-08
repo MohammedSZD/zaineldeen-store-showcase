@@ -1,0 +1,54 @@
+# Builds the site and publishes it to GitHub Pages. Run manually from the Actions tab once Pages is enabled
+# (Settings > Pages > Source: GitHub Actions). It is intentionally not triggered by pushes.
+name: Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Absolute URL (trailing slash) used for canonical, hreflang, Open Graph and the sitemap.
+      SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - name: Sitemap and robots
+        run: |
+          {
+            echo '<?xml version="1.0" encoding="UTF-8"?>'
+            echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            for page in "" shop.html then-and-now.html; do echo "  <url><loc>${SITE_URL}${page}</loc></url>"; done
+            echo '</urlset>'
+          } > dist/sitemap.xml
+          printf 'User-agent: *\nAllow: /\nSitemap: %ssitemap.xml\n' "$SITE_URL" > dist/robots.txt
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

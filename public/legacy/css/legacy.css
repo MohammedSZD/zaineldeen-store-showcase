@@ -1,0 +1,56 @@
+/* Additions for the archived edition. The original look comes from demo.css, Bootstrap 3 and Font Awesome 4. */
+.skip { position: absolute; left: -999px; top: 0; z-index: 2000; background: #a52a2a; color: #fff; padding: 8px 14px; }
+.skip:focus { left: 8px; top: 8px; }
+html, body { overflow-x: hidden; }
+/* demo.css fixes the body at 2000px, which squeezes the flex layout on phones and leaves an empty scroll area. */
+body { height: auto; }
+body > * { flex-shrink: 0; }
+body { padding-bottom: 76px; }
+main { display: block; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+/* Contrast: the original greys on the dark bar and footer were below WCAG AA. */
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a font { color: #d6d6d6; }
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a font { color: #fff; }
+footer .text-justify, .site-footer p, .site-footer li, .site-footer .footer-links a, .site-footer a { color: #d0d0d0; }
+/* The search box shares the bar with the menu; keep it narrow so the bar stays one line where it can, and reserve room where it wraps. */
+@media (min-width: 768px) { .navbar-form .form-control { width: 150px; } }
+/* Heritage strip: keep the original box sizes but never distort the artwork. */
+.her-strip { padding: 0 8px; }
+.her { object-fit: contain; max-width: 100%; }
+.her-logo { width: 400px; height: 100px; }
+.her-band { height: 50px; margin: 0 0 20px; background: #222; border: 1px solid #080808; border-radius: 4px; }
+/* Placeholders for material that is not republished. */
+.legacy-note { color: #555; font-size: 0.9em; font-style: italic; }
+.legacy-note--lg { font-size: 1.15em; margin: 24px 0; }
+.legacy-rule { border-top: 1px dashed #777; margin: 18px 12px; }
+.slide-photo { width: 100%; height: 500px; object-fit: cover; object-position: 50% 35%; }
+.slide-ph { width: 100%; height: 500px; object-fit: cover; }
+.carousel-inner .item .slide-ph[style] { height: auto; }
+.slide-logo { height: 500px; background: #fff; display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; }
+.slide-logo img { width: min(600px, 80%); height: auto; }
+.thumbnail img { max-width: 100%; height: auto; }
+.legacy-h, .legacy-product-title, .legacy-contact-title { margin-top: 10px; }
+.legacy-contact { list-style: none; padding: 0; font-size: 1.4em; line-height: 2; }
+.legacy-contact i { width: 1.4em; color: #8b0000; }
+.footer-h { font-size: 15px; font-weight: 700; margin: 0 0 20px; text-transform: uppercase; color: #fff; }
+/* Contrast and focus fixes that keep the original colours as close as possible. */
+.btn-warning, .btn-warning[disabled] { color: #1a1a1a; }
+.navbar-inverse .navbar-nav > li > a { color: #c4c4c4; }
+.navbar-inverse .navbar-nav > .active > a { color: #fff; }
+a:focus, button:focus, input:focus { outline: 2px solid #f0ad4e; outline-offset: 2px; }
+/* Archive notice (fixed to the bottom so the original layout is untouched). */
+.legacy-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1500; display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; align-items: center; padding: 10px 16px; background: #5a1626; color: #f3e3d6; font: 14px/1.4 Arial, sans-serif; }
+.legacy-banner a { color: #fff; text-decoration: underline; margin-inline-start: 14px; }
+.legacy-banner__links { white-space: nowrap; }
+/* Where the original fixed navbar wraps onto several rows (below 1280px) it would cover the banner; let it flow instead. */
+@media (max-width: 1279px) {
+  body { display: flex; flex-direction: column; }
+  .skip { order: -2; }
+  .navbar-fixed-top { position: relative; order: -1; margin-bottom: 0; }
+}
+@media (max-width: 767px) {
+  .navbar-nav { margin: 0 -15px; }
+  .navbar-form { margin-left: 0; margin-right: 0; }
+  .her-logo { width: 100%; height: auto; max-width: 400px; }
+  .container { width: 100% !important; }
+}

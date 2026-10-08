@@ -1,0 +1,29 @@
+:root {
+  /* Palette: deep burgundy evolved from the original site's brown/maroon accents, with ivory, blush and gold. */
+  --ivory: #fbf7f2;
+  --blush: #f4e8e2;
+  --sand: #eadfd5;
+  --white: #fff;
+  --burgundy: #5a1626;
+  --wine: #7d1d34;
+  --gold: #b8935a;
+  --gold-ink: #7a5c2e;
+  --ink: #231a1c;
+  --muted: #6a5c5f;
+  --line: #e6d9d0;
+
+  /* Latin glyphs come from Cormorant/Inter; Arabic glyphs fall through to Amiri (display) and Noto Sans Arabic (text). */
+  --font-display: 'Cormorant Garamond Variable', 'Cormorant Garamond', 'Amiri', Georgia, serif;
+  --font-body: 'Inter Variable', 'Inter', 'Noto Sans Arabic Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-arabic: 'Amiri', 'Noto Sans Arabic Variable', serif;
+
+  --radius: 14px;
+  --shadow: 0 18px 40px -22px rgba(90, 22, 38, 0.35);
+  --gutter: 20px;
+  --header-h: 68px;
+  --focus: var(--burgundy);
+}
+
+@media (min-width: 720px) {
+  :root { --gutter: 32px; --header-h: 76px; }
+}

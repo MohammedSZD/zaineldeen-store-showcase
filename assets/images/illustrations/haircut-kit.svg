@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="600" viewBox="0 0 480 600" role="img"><title>Illustration</title><path d="M96 540V250a144 144 0 0 1 288 0V540Z" fill="#fff" opacity=".5"/><path d="M96 540V250a144 144 0 0 1 288 0V540Z" fill="none" stroke="#b8935a" stroke-opacity=".55" stroke-width="2"/><ellipse cx="240" cy="492" rx="130" ry="10" fill="#231a1c" opacity=".1"/>
+    <rect x="200" y="172" width="80" height="34" rx="4" fill="#2a2a2e"/><path d="M204 172h72" stroke="#b8935a" stroke-width="3" stroke-dasharray="4 3"/>
+    <rect x="186" y="200" width="108" height="278" rx="34" fill="#8e949a" stroke="#6b6f74" stroke-width="2"/><rect x="200" y="222" width="12" height="200" rx="6" fill="#fff" opacity=".42"/><circle cx="240" cy="270" r="14" fill="#b8935a"/>
+    <g fill="#2a2a2e"><rect x="318" y="330" width="60" height="22" rx="3"/><rect x="324" y="364" width="52" height="18" rx="3"/><rect x="330" y="394" width="44" height="16" rx="3"/></g>
+    <g stroke="#8e949a" stroke-width="3"><path d="M324 350v8"/><path d="M333 350v8"/><path d="M342 350v8"/><path d="M351 350v8"/><path d="M360 350v8"/><path d="M369 350v8"/></g></svg>
